@@ -59,6 +59,16 @@ interactive-portfolio/
 │   ├── package.json
 │   └── .env
 
+## Vercel Link:
+https://interactive-portfolio-black.vercel.app/
+
+## Important Note
+
+For deployment on Vercel, API routes must be colocated with the frontend when using a single-repository setup.
+This project follows that approach to maintain a unified deployment pipeline.
+
+ChatBot works well under local,CodeSpace or Clone Setup.
+
 ##  Setup Instructions (Step-by-Step)
 1 Clone the repository
 git clone https://github.com/your-username/interactive-portfolio.git
