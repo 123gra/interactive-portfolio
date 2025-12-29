@@ -15,7 +15,7 @@ const ChatBot: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hi! 👋 I'm Grace's AI portfolio assistant. Ask me about projects, skills, or experience.",
+      text: "Hi!I'm Grace's AI portfolio assistant. Ask me about projects, skills, or experience.",
       sender: "bot",
     },
   ]);
@@ -63,7 +63,7 @@ const ChatBot: React.FC = () => {
 
       const botMessage: Message = {
         id: Date.now() + 1,
-        text: data.reply || "I’m still learning! Try asking about skills or projects 😊",
+        text: data.reply || "I’m still learning! Try asking about skills or projects ",
         sender: "bot",
       };
 
@@ -74,7 +74,7 @@ const ChatBot: React.FC = () => {
         ...prev,
         {
           id: Date.now() + 2,
-          text: "⚠️ I couldn’t reach the server. Please try again in a moment.",
+          text: " I couldn’t reach the server. Please try again in a moment.",
           sender: "bot",
         },
       ]);
@@ -85,7 +85,7 @@ const ChatBot: React.FC = () => {
 
   return (
     <>
-      {/* 🔘 Toggle Button */}
+      {/*  Toggle Button */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-2xl hover:scale-110 transition-all duration-300"
@@ -94,7 +94,7 @@ const ChatBot: React.FC = () => {
         {isOpen ? "✕" : "💬"}
       </button>
 
-      {/* 💬 Chat Window */}
+      {/*  Chat Window */}
       {isOpen && (
         <div className="fixed bottom-28 right-8 z-50 w-96 h-[550px] rounded-3xl bg-slate-900 border border-white/20 shadow-2xl flex flex-col overflow-hidden">
           

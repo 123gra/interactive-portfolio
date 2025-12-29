@@ -67,5 +67,5 @@ app.post('/api/chat', (req, res) => {
 
 const PORT = process.env.API_PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Backend API running: http://localhost:${PORT}/api/projects`);
+  console.log(`Backend API running: http://localhost:${PORT}/api/projects`);
 });

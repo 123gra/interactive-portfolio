@@ -28,17 +28,17 @@ dotenv
 
 ## Features
 
-🎨 Modern UI built with Tailwind CSS
+ Modern UI built with Tailwind CSS
 
-🧠 AI-style Chatbot powered by backend API
+ AI-style Chatbot powered by backend API
 
-📁 Dynamic Projects section fetched from backend
+ Dynamic Projects section fetched from backend
 
-🧪 QA & Full-Stack focused portfolio
+ QA & Full-Stack focused portfolio
 
-📬 Contact section with Email, LinkedIn, GitHub
+ Contact section with Email, LinkedIn, GitHub
 
-⚙️ Proper frontend–backend integration using CRA proxy
+ Proper frontend–backend integration using CRA proxy
 
 ## Project Structure
 interactive-portfolio/
@@ -58,11 +58,11 @@ interactive-portfolio/
 │   └── .env
 
 ##  Setup Instructions (Step-by-Step)
-1️⃣ Clone the repository
+1 Clone the repository
 git clone https://github.com/your-username/interactive-portfolio.git
 cd interactive-portfolio
 
-2️⃣ Backend Setup
+2️ Backend Setup
 cd backend
 npm install
 npm run dev
@@ -72,7 +72,7 @@ You should see:
 
  Backend API running: http://localhost:5000
 
-3️⃣ Frontend Setup
+3️ Frontend Setup
 cd ../client
 npm install
 npm start
@@ -82,7 +82,7 @@ Frontend runs on:
 
 http://localhost:3000
 
-🔁 Frontend ↔ Backend Communication (IMPORTANT)
+ Frontend ↔ Backend Communication (IMPORTANT)
 
 This project uses Create React App proxy to communicate with the backend.
 
@@ -94,15 +94,15 @@ Works reliably in Codespaces & local dev
 
 No hardcoded API URLs
 
-📌 Proxy Configuration (client/package.json)
+ Proxy Configuration (client/package.json)
 "proxy": "http://localhost:5000"
 
-📌 API Calls (ChatBot.tsx)
+ API Calls (ChatBot.tsx)
 fetch("/api/chat", { ... })
 
 
-❗ No direct localhost:5000 calls from frontend
-❗ No environment variables needed for API URL in CRA
+ No direct localhost:5000 calls from frontend
+ No environment variables needed for API URL in CRA
 
 ## Codespaces Port Visibility (VERY IMPORTANT)
 
@@ -118,7 +118,7 @@ Set visibility to Public
 
 Restart backend if needed
 
-⚠️ If port 5000 is private, the chatbot will not work.
+ If port 5000 is private, the chatbot will not work.
 
 ## Chatbot Feature
 
@@ -166,8 +166,8 @@ Input disabled during API calls
 
 Kadari Grace Magdalene
 
-📧 Email: gracemagdalene1305@gmail.com
+ Email: gracemagdalene1305@gmail.com
 
-💼 LinkedIn: https://www.linkedin.com/in/grace-magdalene-kadari-52494a1a0
+ LinkedIn: https://www.linkedin.com/in/grace-magdalene-kadari-52494a1a0
 
-🐙 GitHub: https://github.com/123gra
+ GitHub: https://github.com/123gra
