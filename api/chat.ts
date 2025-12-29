@@ -10,11 +10,7 @@ export default function handler(
 
   const { message } = req.body;
 
-  if (!message) {
-    return res.status(400).json({ reply: "Invalid message" });
-  }
-
   return res.status(200).json({
-    reply: " Chat API is working on Vercel!",
+    reply: `You said: ${message}`,
   });
 }
