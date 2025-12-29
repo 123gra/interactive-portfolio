@@ -1,8 +1,10 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Skills from './components/Skills';
-import ChatBot from './ChatBot';
-import './styles/hero.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Skills from "./components/Skills";
+import ChatBot from "./ChatBot";
+import "./styles/hero.css";
+import { Mail, Linkedin, Github } from "lucide-react";
+
 interface Project {
   title: string;
   description: string;
@@ -10,82 +12,106 @@ interface Project {
   githubLink: string;
 }
 
+interface ContactItem {
+  label: string;
+  value: string;
+  link: string;
+  icon: React.ReactNode;
+}
+
 function App() {
   const projects: Project[] = [
     {
-      title: 'NFT Marketplace Landing Page',
+      title: "NFT Marketplace Landing Page",
       description:
-        'A UI-heavy, pixel-perfect NFT marketplace landing page built with React, recreating the Carbon Crunch Figma design with hero sections, trending NFTs, artists, CTA, and footer.',
-      technologies: ['React', 'Tailwind CSS', 'UI/UX'],
-      githubLink: 'https://github.com/123gra/nftme'
+        "A UI-heavy, pixel-perfect NFT marketplace landing page built with React, recreating the Carbon Crunch Figma design with hero sections, trending NFTs, artists, CTA, and footer.",
+      technologies: ["React", "Tailwind CSS", "UI/UX"],
+      githubLink: "https://github.com/123gra/nftme",
     },
     {
-      title: 'Playwright E2E Automation Framework',
+      title: "Playwright E2E Automation Framework",
       description:
-        'End-to-end automation framework for the Buggy Cars Rating application with reusable test architecture and reporting.',
-      technologies: ['Playwright', 'JavaScript', 'Automation'],
-      githubLink: 'https://github.com/123gra/goquant-qa-automation'
+        "End-to-end automation framework for the Buggy Cars Rating application with reusable test architecture and reporting.",
+      technologies: ["Playwright", "JavaScript", "Automation"],
+      githubLink: "https://github.com/123gra/goquant-qa-automation",
     },
     {
-      title: 'MapUp Fleet Tracking Dashboard',
+      title: "MapUp Fleet Tracking Dashboard",
       description:
-        'A real-time fleet tracking dashboard visualizing vehicle trips, live status, and animated route playback using interactive maps.',
-      technologies: ['React', 'Leaflet', 'CSS'],
-      githubLink: 'https://github.com/123gra/fleet-tracking-dashboard'
+        "A real-time fleet tracking dashboard visualizing vehicle trips, live status, and animated route playback using interactive maps.",
+      technologies: ["React", "Leaflet", "CSS"],
+      githubLink: "https://github.com/123gra/fleet-tracking-dashboard",
     },
     {
-      title: 'AI Chat Portal (Full Stack)',
+      title: "AI Chat Portal (Full Stack)",
       description:
-        'A full-stack AI chat platform built with React and Django where conversations are stored in PostgreSQL and summarized using GPT.',
-      technologies: ['React', 'Django', 'PostgreSQL', 'AI'],
-      githubLink: 'https://github.com/123gra/ai-chat-portal'
-    }
+        "A full-stack AI chat platform built with React and Django where conversations are stored in PostgreSQL and summarized using GPT.",
+      technologies: ["React", "Django", "PostgreSQL", "AI"],
+      githubLink: "https://github.com/123gra/ai-chat-portal",
+    },
+  ];
+
+  const contacts: ContactItem[] = [
+    {
+      label: "Email",
+      value: "gracemagdalene1305@gmail.com",
+      link: "mailto:gracemagdalene1305@gmail.com",
+      icon: <Mail size={28} />,
+    },
+    {
+      label: "LinkedIn",
+      value: "linkedin.com/in/grace-magdalene-kadari",
+      link: "https://www.linkedin.com/in/grace-magdalene-kadari-52494a1a0",
+      icon: <Linkedin size={28} />,
+    },
+    {
+      label: "GitHub",
+      value: "github.com/123gra",
+      link: "https://github.com/123gra",
+      icon: <Github size={28} />,
+    },
   ];
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 text-white overflow-x-hidden antialiased">
-
       <Navbar />
 
-     {/* HERO SECTION */}
-<section id="about" className="hero-section relative z-10 min-h-screen flex items-center justify-center px-6">
-  <div className="max-w-7xl mx-auto text-center">
+      {/* HERO */}
+      <section
+        id="about"
+        className="hero-section relative z-10 min-h-screen flex items-center justify-center px-6"
+      >
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="hero-role-badge inline-flex items-center gap-3 px-8 py-4 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/20 max-w-fit mx-auto">
+            <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full animate-pulse" />
+            <span className="text-lg font-semibold text-purple-300 tracking-wide uppercase">
+              Full Stack Engineer & QA Automation Specialist
+            </span>
+          </div>
 
-    {/* Role badge */}
-    <div className="hero-role-badge inline-flex items-center gap-3 px-8 py-4 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/20 max-w-fit mx-auto">
-      <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full animate-pulse"></div>
-      <span className="text-lg font-semibold text-purple-300 tracking-wide uppercase">
-        Full Stack Engineer & QA Automation Specialist
-      </span>
-    </div>
+          <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold bg-gradient-to-r from-white via-purple-50 to-pink-100 bg-clip-text text-transparent leading-tight drop-shadow-2xl">
+            Kadari Grace Magdalene
+          </h1>
 
-    {/* Main headline */}
-    <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold bg-gradient-to-r from-white via-purple-50 to-pink-100 bg-clip-text text-transparent leading-tight drop-shadow-2xl">
-  Kadari Grace Magdalene
-</h1>
+          <h2 className="hero-subtitle text-xl md:text-2xl lg:text-3xl font-medium text-white/90 max-w-4xl mx-auto leading-relaxed">
+            Building UI-heavy React applications, scalable backends, and
+            automation-first testing solutions with Playwright
+          </h2>
 
+          <p className="hero-description text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            MCA graduate passionate about clean UI design, full-stack
+            development, CI/CD pipelines, and delivering high-quality,
+            production-ready software.
+          </p>
 
-    {/* Subtitle */}
-    <h2 className="hero-subtitle text-xl md:text-2xl lg:text-3xl font-medium text-white/90 max-w-4xl mx-auto leading-relaxed">
-  Building UI-heavy React applications, scalable backends, and automation-first testing solutions with Playwright
-</h2>
-
-
-    {/* Description */}
-    <p className="hero-description text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed opacity-90">
-      MCA graduate passionate about clean UI design, full-stack development, CI/CD pipelines, and delivering high-quality, production-ready software.
-    </p>
-
-    {/* CTA */}
-    <a
-      href="#projects"
-      className="inline-flex items-center justify-center px-14 py-5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xl font-bold shadow-xl transition-all duration-300"
-    >
-      View My Projects
-    </a>
-
-  </div>
-</section>
+          <a
+            href="#projects"
+            className="inline-flex items-center justify-center px-14 py-5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xl font-bold shadow-xl transition-all duration-300"
+          >
+            View My Projects
+          </a>
+        </div>
+      </section>
 
       {/* SKILLS */}
       <section id="skills" className="py-28 px-6">
@@ -147,68 +173,43 @@ function App() {
       </section>
 
       {/* CONTACT */}
-     <section
-  id="contact"
-  className="relative z-10 py-24 px-6 bg-white/5 backdrop-blur-xl border-t border-white/10"
->
-  <div className="max-w-5xl mx-auto text-center">
-
-    {/* Heading */}
-    <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-      Get In Touch
-    </h2>
-
-    <p className="text-xl text-gray-200 mb-16 max-w-2xl mx-auto">
-      Open to full-stack, frontend, and QA automation opportunities.  
-      Let’s connect and build something impactful.
-    </p>
-
-    {/* Contact cards */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      {/* Email */}
-      <a
-        href="mailto:gracemagdalene1305@gmail.com"
-        className="group p-8 rounded-2xl bg-white/10 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:scale-105"
+      <section
+        id="contact"
+        className="relative z-10 py-24 px-6 bg-white/5 backdrop-blur-xl border-t border-white/10"
       >
-        <div className="text-4xl mb-4">✉️</div>
-        <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-        <p className="text-gray-100 break-all">
-          gracemagdalene1305@gmail.com
-        </p>
-      </a>
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Get In Touch
+          </h2>
 
-      {/* LinkedIn */}
-      <a
-        href="https://www.linkedin.com/in/grace-magdalene-kadari-52494a1a0"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group p-8 rounded-2xl bg-white/10 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:scale-105"
-      >
-        <div className="text-4xl mb-4">💼</div>
-        <h3 className="text-xl font-bold text-white mb-2">LinkedIn</h3>
-        <p className="text-gray-100">
-          View Profile
-        </p>
-      </a>
+          <p className="text-xl text-gray-200 mb-16 max-w-2xl mx-auto">
+            Open to full-stack, frontend, and QA automation opportunities.
+            Let’s connect and build something impactful.
+          </p>
 
-      {/* GitHub */}
-      <a
-        href="https://github.com/123gra"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group p-8 rounded-2xl bg-white/10 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:scale-105"
-      >
-        <div className="text-4xl mb-4">🐙</div>
-        <h3 className="text-xl font-bold text-white mb-2">GitHub</h3>
-        <p className="text-gray-100">
-          github.com/123gra
-        </p>
-      </a>
-
-    </div>
-  </div>
-</section>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {contacts.map((contact) => (
+              <a
+                key={contact.label}
+                href={contact.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-8 rounded-2xl bg-white/10 border border-white/20 hover:border-cyan-400 transition-all duration-300 hover:scale-105"
+              >
+                <div className="mb-4 text-cyan-400 group-hover:text-cyan-300">
+                  {contact.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {contact.label}
+                </h3>
+                <p className="text-gray-100 break-all">
+                  {contact.value}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ChatBot />
 
