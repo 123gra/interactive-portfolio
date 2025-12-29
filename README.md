@@ -14,6 +14,8 @@ Tailwind CSS
 
 Axios
 
+Lucid-React
+
 Framer Motion
 
 Backend
