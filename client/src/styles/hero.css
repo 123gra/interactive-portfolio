@@ -1,0 +1,21 @@
+/* Hero section spacing fixes */
+.hero-section {
+  padding-top: 5rem;   /* replaces pt-20 */
+  padding-bottom: 6rem;
+}
+
+.hero-role-badge {
+  margin-bottom: 1.5rem; /* replaces mb-6 */
+}
+
+.hero-title {
+  margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+  margin-bottom: 2.5rem;
+}
+
+.hero-description {
+  margin-bottom: 4rem;
+}
